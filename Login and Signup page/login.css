@@ -1,0 +1,90 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    text-align: center;
+    border-radius: 1px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #262626;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3897f0;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #2874c7;
+}
+
+.link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #262626;
+}
+
+.link a {
+    color: #3897f0;
+    text-decoration: none;
+}
+
+.link a:hover {
+    text-decoration: underline;
+}
+
+.toggle-container {
+    cursor: pointer;
+    color: #3897f0;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.toggle-container:hover {
+    text-decoration: underline;
+}

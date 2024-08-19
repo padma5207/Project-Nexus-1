@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login/Signup</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Login Container -->
+        <div class="form-container" id="login-container">
+            <img src="logo.png" alt="Instagram Logo" class="logo">
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Phone number, username, or email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <input type="submit" value="Log In">
+                <p class="small-text">Forgot password?</p>
+            </form>
+            <div class="link">
+                <p>Don't have an account? <span class="toggle-container" onclick="showSignup()">Sign up</span></p>
+            </div>
+        </div>
+
+        <!-- Signup Container -->
+        <div class="form-container" id="signup-container" style="display: none;">
+            <img src="logo.png" alt="Instagram Logo" class="logo">
+            <h2>Sign up to see photos and videos from your friends.</h2>
+            <form id="signup-form">
+                <input type="email" id="signup-email" placeholder="Mobile Number or Email" required>
+                <input type="text" id="signup-fullname" placeholder="Full Name" required>
+                <input type="text" id="signup-username" placeholder="Username" required>
+                <input type="password" id="signup-password" placeholder="Password" required>
+                <input type="submit" value="Sign Up">
+            </form>
+            <div class="link">
+                <p>Have an account? <span class="toggle-container" onclick="showLogin()">Log in</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the signup form and hide the login form
+        function showSignup() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('signup-container').style.display = 'block';
+        }
+
+        // Function to show the login form and hide the signup form
+        function showLogin() {
+            document.getElementById('signup-container').style.display = 'none';
+            document.getElementById('login-container').style.display = 'block';
+        }
+
+        // Handle Login Form Submission
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+
+            if (username === "" || password === "") {
+                alert("Please fill in all fields");
+            } else {
+                alert(`Logged in as ${username}`);
+            }
+        });
+
+        // Handle Signup Form Submission
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('signup-email').value;
+            const fullname = document.getElementById('signup-fullname').value;
+            const username = document.getElementById('signup-username').value;
+            const password = document.getElementById('signup-password').value;
+
+            if (email === "" || fullname === "" || username === "" || password === "") {
+                alert("Please fill in all fields");
+            } else {
+                alert(`Signed up as ${username}`);
+            }
+        });
+    </script>
+</body>
+</html>
